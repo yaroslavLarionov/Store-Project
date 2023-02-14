@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import utils.ConfigReader;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class WebDriverInstance {
 
@@ -43,7 +44,7 @@ public class WebDriverInstance {
             default:
                 throw new RuntimeException("Please provide correct browser value");
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         return driver;
     }

@@ -11,8 +11,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <selenium-java.version>4.8.0</selenium-java.version>
-        <selenium-api.version>4.8.0</selenium-api.version>
+        <selenium-java.version>3.141.59</selenium-java.version>
         <webdrivermanager.version>5.3.1</webdrivermanager.version>
         <testng.version>7.4.0</testng.version>
         <commons-io.version>2.11.0</commons-io.version>
@@ -23,12 +22,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium-java.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>${selenium-api.version}</version>
         </dependency>
 
         <dependency>
