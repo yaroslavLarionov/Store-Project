@@ -59,8 +59,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <suiteXmlFiles>parallel.xml</suiteXmlFiles>
-                    <!--mvn clean test -D surefire.suiteXmlFiles=parallel.xml  (to run from IntelliJ terminal, no space after D - to run everywhere else)-->
+                  <!--  <suiteXmlFiles>parallel.xml</suiteXmlFiles> -->
+                    <!--mvn clean test -D surefire.suiteXmlFiles=parallel.xml  (to run from IntelliJ terminal)
+                        clean test (to run in Jenkins)-->
                     <skipTests>false</skipTests>
                 </configuration>
             </plugin>
