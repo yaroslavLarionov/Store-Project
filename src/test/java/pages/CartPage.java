@@ -9,8 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CartPage extends BasePage {
 
-    public CartPage() {
-        PageFactory.initElements(getDriver(), this);
+    protected  WebDriver driver;
+
+    public CartPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public final String PROMO_CODE = "20OFF";

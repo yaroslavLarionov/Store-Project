@@ -9,8 +9,11 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ProductPage extends BasePage {
 
-    public ProductPage() {
-        PageFactory.initElements(getDriver(), this);
+    protected WebDriver driver;
+
+    public ProductPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(id = "group_1")

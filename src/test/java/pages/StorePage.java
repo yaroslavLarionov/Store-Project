@@ -8,8 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class StorePage extends BasePage {
 
-    public StorePage() {
-        PageFactory.initElements(getDriver(), this);
+    protected WebDriver driver;
+
+    public StorePage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//a[text()='Hummingbird printed t-shirt']")
