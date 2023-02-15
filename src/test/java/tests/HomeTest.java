@@ -25,24 +25,19 @@ public class HomeTest extends Hooks {
         cartPage = new CartPage(getDriver());
     }
 
-//    @Test
-//    public void titleTest() {
-//        homePage.click(homePage.storeLinkBtn);
-//        storePage.click(storePage.tshirtItem);
-//        productPage.selectSize("M");
-//        productPage.click(productPage.addToCartBtn);
-//        productPage.click(productPage.proceedToCheckoutBtn);
-//        cartPage.click(cartPage.cartVoucherBtn);
-//        cartPage.sendKeys(cartPage.promoCodeField, cartPage.PROMO_CODE);
-//        cartPage.click(cartPage.addPromoCodeBtn);
-//        cartPage.click(cartPage.proceedToCheckoutWithShippingBtn);
-//    }
-
     @Test
-    public void test() {
-        homePage.click(homePage.storeLinkXpath);
-        Assert.assertEquals(getDriver().getTitle(), "teststore");
+    public void titleTest() {
+        homePage.click(homePage.storeLinkBtn);
+        storePage.click(storePage.tshirtItem);
+        productPage.selectSize("M");
+        productPage.click(productPage.addToCartBtn);
+        productPage.click(productPage.proceedToCheckoutBtn);
+        cartPage.click(cartPage.cartVoucherBtn);
+        cartPage.sendKeys(cartPage.promoCodeField, cartPage.PROMO_CODE);
+        cartPage.click(cartPage.addPromoCodeBtn);
+        cartPage.click(cartPage.proceedToCheckoutWithShippingBtn);
     }
+
 
 
 }

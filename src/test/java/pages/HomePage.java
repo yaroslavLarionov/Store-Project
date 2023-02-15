@@ -19,8 +19,6 @@ public class HomePage extends BasePage {
     @FindBy(linkText = "TEST STORE")
     public WebElement storeLinkBtn;
 
-    @FindBy(xpath = "//a[text()='Test Store']")
-    public WebElement storeLinkXpath;
 
 
 }

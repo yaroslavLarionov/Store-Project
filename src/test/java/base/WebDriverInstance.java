@@ -6,11 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 import utils.ConfigReader;
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverInstance {
@@ -24,11 +21,8 @@ public class WebDriverInstance {
     public void createDriver() {
         String browser = ConfigReader.getProperty("browser").toLowerCase();
         ChromeOptions options = new ChromeOptions();
-        //options.setHeadless(true);
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-        capabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-        capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-        options.merge(capabilities);
+        options.addArguments("--headless");
+        options.addArguments("window-size=2560x1440");
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
